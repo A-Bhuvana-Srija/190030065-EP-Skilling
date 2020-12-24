@@ -1,0 +1,76 @@
+<html>
+<title> Registration Page </title>
+<body> 
+	<form action = "login" method = "post">
+		<p align = "center"><strong> Personal Details : </strong></p>
+		<table align = "center">
+			<tr><td> Name Of The Student :</td>
+			<td>
+				<input type = "text" name = "user" placeholder = "eg: Bhuvana Srija">
+			</td>
+			</tr>
+			<tr><td> Regd. Number :</td>
+			<td>
+				<input type = "text" name = "user" placeholder = "eg: 190030065">
+			</td>
+			</tr>
+			<tr><td> Email ID :</td>
+			<td>
+				<input type = "text" name = "user" placeholder = "eg: 190030065@kluniversity.in">
+			</td>
+			</tr>
+			<tr><td> Gender : </td>
+			<td>
+				<input type="radio" id="male" name="gender" value="male">
+				<label for="male">Male</label><br>
+				<input type="radio" id="female" name="gender" value="female">
+				<label for="female">Female</label><br>
+				<input type="radio" id="other" name="gender" value="other">
+				<label for="other">Rather Not Say</label>
+			</td>
+			</tr>
+			<tr><td> Password :</td>
+			<td>
+				<input type = "password" name = "pswd" placeholder = "Enter Your Password">
+			</td>
+			</tr><br>
+			<tr><td> Confirm Password :</td>
+			<td>
+				<input type = "password" name = "pswd" placeholder = "Confirm Your Password">
+			</td>
+			</tr>
+		</table>
+		<p align = "center"><strong> Other Details : </strong></p><br>
+		<table align = "center">
+			<tr><td> Favourite Subject : </td>
+			<td>
+             			<select id = "myList">
+               				<option value = "C">C</option>
+               				<option value = "C++">C++</option>
+               				<option value = "Java">Java</option>
+               				<option value = "Python">Python</option>
+				<option value="HTML">HTML</option>
+				<option value="CSS">CSS</option>
+				<option value="JS">JS</option>
+            	 		</select>
+			</td>
+			</tr>
+			<tr><td>Favourite Game:</td>
+			<td>
+				<input type="checkbox" name="game" value="Cricket"> Cricket
+    				<input type="checkbox" name="game" value="football"> Football
+   				 <input type="checkbox" name="game" value="hockey"> Hockey
+				<input type="checkbox" name="game" value="chess">Chess
+			</td>
+			</tr>
+			<tr><td> Address : </td>
+			<td>
+				<textarea  name="address" rows="4" cols="50" placeholder = "100-150 words">
+  
+  				</textarea>
+			</td>
+			</tr>
+			<tr><td><input type="submit" value="SUBMIT"></td></tr>
+		</table>
+	</form>
+</body>
