@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+	
+	<title> Login Page </title>
+	<link rel = "stylesheet" type = "text/css" href = "EP_Task1_Registration_Form_CSS.css">
+	<script> 
+	function validateform(){ 
+		var name=document.myform.user.value; 
+		var password=document.myform.password.value; 
+ 
+		if (name==null || name==""){ 
+			 alert("Username field can't be empty!");
+			return false;
+		}
+		else if(password==null || password=="")
+		{
+			alert("Password field can't be empty!");
+			return false;	
+		}
+		else if(password.length < 8)
+		{
+			alert("Insufficient length of characters in Password! There should be a minimum of 8 characters in the Password.");
+			return false;
+		}
+		else if(name.length < 8)
+		{
+			alert("Insufficient length of characters in Username! There should be a minimum of 8 characters in the Username.");
+			return false;
+		}
+		else if(name.length == password.length)
+		{
+			alert("Welcome " + name);
+			return false;	
+		}
+	} 
+</script> 
+</head>
+<body> 
+	<div class="bg"></div>
+	<div class="bg bg2"></div>
+	<div class="bg bg3"></div>
+	<h2 align = "center"  style = 'color:Blue'> Registration  Page </h2>
+	<div class = "box1">
+
+	<form name="myform" method="post" action="abc.jsp" onsubmit="return validateform()" > 
+	<table align = "center">
+			<tr><td> Username :</td>
+			<td>
+				<input type = "text" name = "user" placeholder = "Enter your Username">
+			</td>
+			</tr>
+			<tr><td> Password :</td>
+			<td>
+				<input type = "password" name = "password" placeholder = "Enter your Password">
+			</td>
+			</tr>
+		</table>
+	<center>
+		<input type="submit" value="LOGIN">
+	</center> 
+	</form>
+
+	</div>
+</body>
+</html>
