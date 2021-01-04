@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html>
+<head>
+	
+	<title> Login Page </title>
+	<link rel = "stylesheet" type = "text/css" href = "EP_Task1_Registration_Form_CSS.css">
+	<script> 
+	function validateform(){ 
+		var name=document.myform.user.value; 
+		var password=document.myform.password.value;
+		var password1=document.myform.password1.value;
+		var email=document.myform.email.value;
+		var gender=document.myform.gender.value;
+		var regdno=document.myform.regdno.value;
+		 var at = email.indexOf('@');
+                		var dot = email.lastIndexOf('.');
+                		var len = email.length;
+		var address = document.myform.address.value;
+		var checkboxs = document.getElementsByName("game");
+ 		if(name == null || name == "" && password == null || password == "" && email == null || email == "" && gender == null)
+		{
+			alert("All the fields must be filled!");
+			return false;
+		}
+		if (name==null || name==""){ 
+			alert("All the fields must be filled!");
+			return false;
+		}
+		if(name.length < 8)
+		{
+			alert("Insufficient length of characters in Username! There should be a minimum of 8 characters in the Username.");
+			return false;
+		}
+		if(regdno==null || regdno=="")
+		{
+			alert("Regd. No. field can't be empty!");
+			return false;
+		}
+		if(email==null || email=="")
+		{
+			alert("Email field can't be empty!");
+			return false;
+		}
+		if(email.length < 8)
+		{
+			alert("Insufficient length of Email! There should be a minimum of 8 characters in the Password.");
+			return false;	
+		}
+		if (at == -1 && dot == -1) {
+                    		alert("Enter Valid EmailID");
+                    		return false;
+                		}
+                		if ((parseInt(dot) - parseInt(at)) == 1) {
+                    		alert("Enter a Valid Email ID");
+                    		return false;
+                		}
+                		if ((parseInt(len) - parseInt(dot) - 1) < 2) {
+                    		alert("Enter a Valid Email ID");
+                    		return false;
+               		}
+                		for (var i = 0, l = checkboxs.length; i < l; i++) {
+                    		if (checkboxs[i].checked) {
+                        			count++;
+                    		}
+                		}
+                		if (count == 0) {
+                    		alert("Please check a min one checkbox");
+                    		return false;
+                		}
+		if(password==null || password=="")
+		{
+			alert("Password field can't be empty!");
+			return false;	
+		}
+		if(password.length < 8)
+		{
+			alert("Insufficient length of characters in Password! There should be a minimum of 8 characters in the Password.");
+			return false;
+		}
+		if(password1==null || password1=="")
+		{
+			alert("Confirm Password field can't be empty!");
+			return false;	
+		}
+		if(password1.length < 8)
+		{
+			alert("Insufficient length of characters in Confirm Password! There should be a minimum of 8 characters in the Password.");
+			return false;
+		}
+		if(name.length == password.length)
+		{
+			alert("Welcome " + name);
+			return false;	
+		}
+	} 
+</script> 
+</head>
+<body> 
+	<div class="bg"></div>
+	<div class="bg bg2"></div>
+	<div class="bg bg3"></div>
+	<h2 align = "center"  style = 'color:Blue'> Registration  Page </h2>
+	<div class = "box1">
+
+	<form name="myform" method="post" action="abc.jsp" onsubmit="return validateform()" > 
+	<table align = "center">
+			<tr><td> Name Of The Student :</td>
+			<td>
+				<input type = "text" name = "user" placeholder = "Enter your Username">
+			</td>
+			</tr>
+			<tr><td> Regd. Number :</td>
+			<td>
+				<input type = "text" name = "regdno" placeholder = "eg: 190030065">
+			</td>
+			</tr>
+			<tr><td> Email ID :</td>
+			<td>
+				<input type = "text" name = "email" placeholder = "eg: 190030065@kluniversity.in">
+			</td>
+			</tr>
+			<tr><td> Gender : </td>
+			<td>
+				<input type="radio" id="male" name="gender" value="male">
+				<label for="male">Male</label><br>
+				<input type="radio" id="female" name="gender" value="female">
+				<label for="female">Female</label><br>
+				<input type="radio" id="other" name="gender" value="other">
+				<label for="other">Rather Not Say</label>
+			</td>
+			</tr>
+			<tr><td> Password :</td>
+			<td>
+				<input type = "password" name = "password" placeholder = "Enter your Password">
+			</td>
+			</tr>
+			<tr><td> Confirm Password :</td>
+			<td>
+				<input type = "password" name = "password1" placeholder = "Confirm Your Password">
+			</td>
+			</tr>
+			<tr><td> Favourite Subject : </td>
+			<td>
+             			<select id = "myList">
+               				<option value = "C" name = "subject">C</option>
+               				<option value = "C++" name = "subject">C++</option>
+               				<option value = "Java" name = "subject">Java</option>
+               				<option value = "Python" name = "subject">Python</option>
+				<option value="HTML" name = "subject">HTML</option>
+				<option value="CSS" name = "subject">CSS</option>
+				<option value="JS" name = "subject">JS</option>
+            	 		</select>
+			</td>
+			</tr>
+			<tr><td>Favourite Game:</td>
+			<td>
+				<input type="checkbox" name="game" value="Cricket"> Cricket
+    				<input type="checkbox" name="game" value="football"> Football
+   				 <input type="checkbox" name="game" value="hockey"> Hockey
+				<input type="checkbox" name="game" value="chess">Chess
+			</td>
+			</tr>
+			
+			<tr><td> Address : </td>
+			<td>
+				<textarea  name="address" rows="4" cols="50" placeholder = "100-150 words">
+  
+  				</textarea>
+			<br><br>
+			</td>
+			</tr>
+	</table>
+	<center>
+		<input type="submit" value="LOGIN">
+	</center> 
+	</form>
+
+	</div>
+</body>
+</html>
