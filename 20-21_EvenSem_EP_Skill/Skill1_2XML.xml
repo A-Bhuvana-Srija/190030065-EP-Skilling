@@ -1,10 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?xml-stylesheet type="text/xsl" href="Skill1_2XSL.xsl"?>
-<Students>
+<Students xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:noNamespaceSchemaLocation="Skill1_2XSD.xsd">
 	<student id="a">
-		<no>
-			1
-		</no>
+		<no>1</no>
 		<name>
 			Bhuvana
 		</name>
@@ -19,9 +18,7 @@
 		</class>
 	</student>
 	<student id="b">
-		<no>
-			2
-		</no>
+		<no>2</no>
 		<name>
 			Purvaja
 		</name>
@@ -36,9 +33,7 @@
 		</class>
 	</student>
 	<student id="c">
-		<no>
-			3
-		</no>
+		<no>3</no>
 		<name>
 			Reshma
 		</name>
@@ -53,9 +48,7 @@
 		</class>
 	</student>
 	<student id="d">
-		<no>
-			4
-		</no>
+		<no>4</no>
 		<name>
 			Amruta
 		</name>
@@ -70,9 +63,7 @@
 		</class>
 	</student>
 	<student id="e">
-		<no>
-			5
-		</no>
+		<no>5</no>
 		<name>
 			Bhavya
 		</name>
