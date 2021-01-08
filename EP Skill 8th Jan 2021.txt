@@ -1,0 +1,42 @@
+#CREATE TABLE
+create table employee_table(EmpID int primary key, EmpName varchar(45), EmpDOB date, EmpAge int, EmpDept varchar(45), EmpSalary int, EmptDesig varchar(45));
+
+#ADD COLUMN
+alter table employee_table add column EmpPhone long;
+
+#INSERTION
+insert into employee_table values(1, 'Emp 1', '1972-03-01', 46, 'CSE', 75000, 'Dept. Head',9192939495);
+insert into employee_table values(2, 'Emp 2', '1976-11-14', 42, 'ECE', 40000, 'Assoc. Prof',8182838485);
+insert into employee_table values(3, 'Emp 3', '1978-06-12', 40, 'EEE', 40000, 'Assoc. Prof',9594939291);
+insert into employee_table values(4, 'Emp 4', '1991-08-22', 29, 'ECSE', 30000, 'Asst. Prof',8584838281);
+insert into employee_table values(5, 'Emp 5', '1992-09-16', 28, 'CSE', 30000, 'Asst. Prof',98979695949);
+
+#UPDATE
+update employee_table set EmpName = 'Updated Name' where EmpID = 4;
+
+#DROP COLUMN
+alter table employee_table drop EmpPhone;
+
+#DROP TABLE
+drop table employee_table;
+
+#DROP COLUMN
+alter table employee_table drop column EmpPhone;
+
+#TABLE DESCRIPTION 
+desc employee_table;
+
+#DISPLAY TABLE
+select * from employee_table;
+
+#SELECTED DISPLAY
+select EmpID, EmpName from employee_table where EmpID > 3;
+select max(EmpAge),EmpId from employee_table;
+select min(EmpSalary),EmpID from employee_table;
+select avg(EmpSalary),EmpID from employee_table;
+
+#CONDITION BASED DISPLAY
+select * from employee_table where EmpSalary > 50000;
+
+#CHANGE COLUMN DATATYPE
+alter table employee_table modify column EmpAge long;
